@@ -24,6 +24,7 @@ We made the following changes to the base application to ease deployment to Appr
 
 1. Modify the pom.xml and Application.java files to support the deployment as a WAR file (http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#build-tool-plugins-maven-packaging)
 2. Added an application.properties file to provide an override to the default mongodb uri property. By default, the application will expect MongoDB to be running and accessible via localhost, which will not be the case in a cloud platform. Instead, we are using Apprenda's Add-On model to automatically wire-in the proper connection string. 
+3. The final version is in the *complete* folder.
 
 == Apprenda Requirements
 1. Prior to the deployment of the application, you will need an instance of MongoDB available. 
