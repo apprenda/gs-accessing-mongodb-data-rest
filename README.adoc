@@ -31,7 +31,7 @@ We made the following changes to the base application to ease deployment to Appr
 3. Make sure your platform has Java 1.8 available via the SOC. 
 
 == Additional Notes
-1. In order to build the application, simply run mvn package
+1. In order to build the application, simply run *mvn package*
 2. You will need to have an available instance of MongoDB or the test run during the build process will fail. Provide the URI in the application.properties file. 
 
 == What you'll build
