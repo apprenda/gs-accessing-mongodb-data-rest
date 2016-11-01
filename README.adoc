@@ -19,6 +19,16 @@ projects: [spring-data-rest]
 
 This guide walks you through the process of creating an application that accesses document-based data through a link:/guides/gs/rest-hateoas[hypermedia-based] link:/understanding/REST[RESTful front end].
 
+== Apprenda Updates
+We made the following changes to the base application to ease deployment to Apprenda:
+1. Modify the pom.xml and Application.java files to support the deployment as a WAR file (http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#build-tool-plugins-maven-packaging)
+2. Added an application.properties file to provide an override to the default mongodb uri property. By default, the application will expect MongoDB to be running and accessible via localhost, which will not be the case in a cloud platform. Instead, we are using Apprenda's Add-On model to automatically wire-in the proper connection string. 
+
+== Apprenda Requirements
+1. Prior to the deployment of the application, you will need an instance of MongoDB available. 
+2. If you wish to leverage the Apprenda Add-On model, simply deploy the following: https://github.com/apprenda/Apprenda-MongoDB
+3. Make sure your platform has Java 1.8 available via the SOC. 
+
 == What you'll build
 
 You'll build a Spring application that let's you create and retrieve `Person` objects stored in a http://www.mongodb.org/[MongoDB] link:/understanding/NoSQL[NoSQL] database using Spring Data REST. Spring Data REST takes the features of http://projects.spring.io/spring-hateoas[Spring HATEOAS] and http://projects.spring.io/spring-data-mongodb[Spring Data MongoDB] and combines them together automatically.
